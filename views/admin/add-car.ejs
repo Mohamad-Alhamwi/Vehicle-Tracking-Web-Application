@@ -1,0 +1,40 @@
+<%- include('../includes/admin-upper-section.ejs') %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title"><% if(editing) { %>Edit Car<% } else { %>Add a Car<% } %></h4>
+          <!-- <p class="card-category"></p> -->
+        </div>
+        <div class="card-body">
+          
+          <%- include ('../partials/messages') %>
+          
+          <form action="/admin/<% if(editing) { %>edit-car<% } else { %>add-car<% } %>"method="POST">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="bmd-label-floating">License Plate</label>
+                  <input type="text" class="form-control" name="licensePlate" value="<% if(editing) { %><%= car.licensePlate %><% } else { %><% } %>" >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="bmd-label-floating">status</label>
+                  <input type="text" class="form-control" name="status" value="<% if(editing) { %><%= car.status %><% } else { %><% } %>">
+                </div>
+              </div>
+            </div>
+            <% if(editing) { %>
+              <input type="hidden" class="form-control" name="carId" value="<%=car.id%>"> 
+            <% } else { %><% } %>
+            <button type="submit" class="btn btn-primary pull-right"><% if(editing) { %> Edit <% } else { %> Add <% } %></button>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../includes/admin-lower-section.ejs') %>

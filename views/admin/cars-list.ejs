@@ -1,0 +1,89 @@
+<%- include('../includes/admin-upper-section.ejs') %>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <% if (carsList.length > 0) { %>
+                <div class="card">
+                  <div class="card-header card-header-primary">
+                    <h4 class="card-title ">Simple Table</h4>
+                    <p class="card-category"> Here is a subtitle for this table</p>
+                    <%- include ('../partials/messages') %>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead class=" text-primary">
+                          <th>
+                            ID
+                          </th>
+                          <th>
+                            License Plate
+                          </th>
+                          <th>
+                            Status
+                          </th>
+                          <th>
+                            Added Date
+                          </th>
+                          <th>
+                            Last Location
+                          </th>
+                          <th>
+                            Edited Date
+                          </th>
+                          <th>
+                            Admin Id
+                          </th>
+                        </thead>
+                        <% for (let car of carsList) { %>
+                          <tbody>
+                            <tr>
+                              <td>
+                                  <%= car.id %>
+                              </td>
+                              <td>
+                                  <%= car.licensePlate %>
+                              </td>
+                              <td>
+                                  <%= car.status %>
+                              </td>
+                              <td>
+                                  <%= car.addedDate %>
+                              </td>
+                              <td>
+                                  <%= car.lastLocation %>
+                              </td>
+                              <td>
+                                  <%= car.editedDate %>
+                              </td>
+                              <td>
+                                  <%= car.userId %>
+                              </td>
+                              <td class="td-actions text-right">
+                                <form action="/admin/edit-car-form" method="POST">
+                                    <input type="hidden" class="form-control" name="carId" value="<%= car.id %>"> 
+                                    <button type="submit" rel="tooltip" title="Edit Car" class="btn btn-primary btn-link btn-sm">
+                                    <i class="material-icons">edit</i>
+                                    </button>
+                                </form>
+                                  
+                                <button type="button" rel="tooltip" title="Remove Car" class="btn btn-danger btn-link btn-sm">
+                                  <i class="material-icons">close</i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        <% } %>  
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+<%- include('../includes/admin-lower-section.ejs') %>
+
+
+
+

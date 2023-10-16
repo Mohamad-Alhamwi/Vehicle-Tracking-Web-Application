@@ -1,0 +1,64 @@
+<%- include('../includes/admin-upper-section.ejs') %>
+	
+	<div class="card" style="width: 100% ;">
+		<div id='map' class="card-img-top"></div>
+		<% if (carsList.length > 0) { %>
+			<% for (let car of carsList) { %>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-sm-2">
+							<div class="card text-center">
+								<div class="card-body">
+									<i class='fas fa-taxi' style='font-size:70px'></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="card">
+								<div class="card-body">
+									<h6 class="card-title bg-light">
+										<span style="color:#B8860B;">
+											Car: <span style="color:#A9A9A9;"><%= car.licensePlate %></span> 
+										</span>
+									</h6>
+									<h6 class="card-title bg-light">
+										<span style="color:#B8860B;">
+											State: <span style="color:#A9A9A9;"><%= car.status %></span>
+										</span>
+									</h6>
+									<h6 class="card-title bg-light">
+										<span style="color:#B8860B;">
+											Location: <span style="color:#A9A9A9;"><%= car.lastLocation %></span>
+										</span>
+									</h6>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="card">
+								<div class="card-body">
+									<h6 class="card-title bg-light">
+										<span style="color:#B8860B;">
+											Miles: <span style="color:#A9A9A9;"></span>
+										</span>
+									</h6>
+									<h6 class="card-title bg-light">
+										<span style="color:#B8860B;">
+											Speed: <span style="color:#A9A9A9;"></span>
+										</span>
+									</h6>
+									<h6 class="card-title bg-light">
+										<span style="color:#B8860B;">
+											Time: <span style="color:#A9A9A9;"></span>
+										</span>
+									</h6>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+			<% } %>
+		<% } %>
+	</div>
+
+<%- include('../includes/admin-lower-section.ejs') %>

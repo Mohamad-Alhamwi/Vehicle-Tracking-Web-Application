@@ -1,0 +1,58 @@
+<%- include('../includes/user-upper-section.ejs') %>
+
+	<%- include ('../partials/messages') %>
+	<div class="card" style="width: 100% ;">
+		<div id='map' class="card-img-top"></div>
+		<div class="card-body">
+			<div class="card text-dark card-header">
+				<div class="row">
+					<div class="col-sm-5 py-2">
+						<div class="card-body text-center">
+							<h5 class="card-title" id="order_title">Order a car right now</h5>
+							<div class="buttonDiv" id="myButtonDiv">
+								<a href="#" class="btn btn-primary" id="order_and_show">Order Now</a>
+							</div>
+							<p id="demo" class="card-text"></p>	
+						</div>
+					</div>
+					<div class="col-sm-2 ordered_car_info" style="display: none;">
+						<div class="card text-center">
+							<div class="card-body">
+								<i class='fas fa-taxi' style='font-size:48px'></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5 ordered_car_info" style="display: none;">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title bg-light">
+									<span style="color:#B8860B;">
+										Car: <span style="color:#A9A9A9;" id="license_plate"></span>
+									</span>
+								</h6>
+								<h6 class="card-title bg-light">
+									<span style="color:#B8860B;">
+										Time: <span style="color:#A9A9A9;" id="time"></span>
+									</span>
+								</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+
+
+	<!-- <div class="card" style="width: 100% ;">
+		<div id='map' class="card-img-top"></div>
+		<div class="card text-center" >
+			<div class="card-body">
+				<h5 class="card-title" id="getOrder">Order a car right now</h5>
+				<a href="#" onclick="order()" class="btn btn-primary">Order Now</a>
+				<p id="demo" class="card-text"></p>
+			</div>
+		</div>
+	</div> -->
+
+<%- include('../includes/user-lower-section.ejs') %>

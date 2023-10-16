@@ -1,0 +1,125 @@
+<%- include('../includes/admin-upper-section.ejs') %>
+<div class="container-fluid">
+  <%- include ('../partials/messages') %>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-header card-header-warning card-header-icon">
+          <div class="card-icon">
+            <i class="material-icons">content_copy</i>
+          </div>
+          <p class="card-category"></p>
+          <h3 class="card-title">
+            <small></small>
+          </h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons text-danger"></i>
+            <a href="#pablo"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-header card-header-success card-header-icon">
+          <div class="card-icon">
+            <i class="material-icons"></i>
+          </div>
+          <p class="card-category"></p>
+          <h3 class="card-title"></h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i>   
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-header card-header-danger card-header-icon">
+          <div class="card-icon">
+            <i class="material-icons"></i>
+          </div>
+          <p class="card-category"></p>
+          <h3 class="card-title"></h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i>   
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-header card-header-info card-header-icon">
+          <div class="card-icon">
+            <i class="fa fa-twitter"></i>
+          </div>
+          <p class="card-category"></p>
+          <h3 class="card-title"></h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card card-chart">
+        <div class="card-header card-header-success">
+          <div class="ct-chart" id="dailySalesChart"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Daily Trips</h4>
+          <p class="card-category">
+            <span class="text-success"><i class=""></i></span></p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-chart">
+        <div class="card-header card-header-warning">
+          <div class="ct-chart" id="websiteViewsChart"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">New Subscriptions</h4>
+          <p class="card-category"></p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-chart">
+        <div class="card-header card-header-danger">
+          <div class="ct-chart" id="completedTasksChart"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Idle Cars</h4>
+          <p class="card-category"></p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../includes/admin-lower-section.ejs') %>

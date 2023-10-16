@@ -1,0 +1,72 @@
+<%- include('../includes/user-upper-section.ejs') %>
+  <div class="card chart-card">
+    <!-- Card content -->
+    <div class="card-body pb-0">
+      <!-- Title -->
+      <h4 class="card-title font-weight-bold">Trip #<%= tripInformation.id %> Information</h4>
+      <p class="card-title font-weight-lighter mt-3 lead" style="color: #9c27b0 ;" >Status: <%= tripInformation.status %></p>
+      <div class="row">
+        <div class="col-sm-6 mt-3 mb-4">
+          <h5 class="card-text lead">Car Id</h5>
+          <p class="card-text pb-0" style="border-bottom: 1px solid grey;"><%= tripInformation.carId %></p>
+        </div>
+        <div class="col-sm-6 mt-3 mb-4">
+          <h5 class="card-text lead">Car License Plate</h5>
+          <p class="card-text pb-0" style="border-bottom: 1px solid grey;">AE0002AE</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 mt-1 mb-4">
+          <h5 class="card-text lead">Customer Id</h5>
+          <p class="card-text pb-0" style="border-bottom: 1px solid grey;"><%= tripInformation.userId %></p>
+        </div>
+        <div class="col-sm-6 mt-1 mb-4">
+          <h5 class="card-text lead">Customer Name</h5>
+          <p class="card-text pb-0" style="border-bottom: 1px solid grey;"><%= tripInformation.userName %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 mt-0">
+          <h5 class="card-text lead">Car Location</h5>
+          <p class="card-text pb-0" style="border-bottom: 1px solid grey;"><%= tripInformation.carLocation %></p>
+        </div>
+        <div class="col-sm-12 mt-3">
+          <h5 class="card-text lead">Origin</h5>
+          <p class="card-text pb-0" style="border-bottom: 1px solid grey;"><%= tripInformation.userLocation %></p>
+        </div>
+        <div class="col-sm-12 mt-3 mb-4">
+            <h5 class="card-text lead">Destination</h5>
+            <p class="card-text pb-0" style="border-bottom: 1px solid grey;"><%= tripInformation.destination %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card bg-secondary">
+            <div class="card-body mx-auto">
+              <h5 class="card-text lead">Ordered at</h5>
+              <p class="card-text"><%= tripInformation.startTime %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card  bg-secondary">
+            <div class="card-body mx-auto">
+              <h5 class="card-text lead">Started at</h5>
+              <p class="card-text"><%= tripInformation.arrivalTime %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-secondary">
+              <div class="card-body mx-auto">
+                <h5 class="card-text lead">Ended at</h5>
+                <p class="card-text"><%= tripInformation.endTime %></p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+<%- include('../includes/user-lower-section.ejs') %>
+
+

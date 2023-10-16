@@ -1,0 +1,66 @@
+<%- include('../includes/admin-upper-section.ejs') %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <% if (tripsList.length > 0) { %>
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">Simple Table</h4>
+              <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>
+                      Id
+                    </th>
+                    <th>
+                      Origin
+                    </th>
+                    <th>
+                      Destination
+                    </th>
+                    <th>
+                      Status
+                    </th>
+                  </thead>
+                  <% for (let trips of tripsList) { %>
+                    <tbody>
+                      <tr class="" title="Click for more information about this trip.">
+                        <td>
+                          <a href="/admin/trips/trip/<%= trips.id %>" class="information">
+                            <%= trips.id %>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="/admin/trips/trip/<%= trips.id %>" class="information">
+                            <%= trips.userLocation %>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="/admin/trips/trip/<%= trips.id %>" class="information">
+                            <%= trips.destination %>
+                          </a>   
+                        </td>
+                        <td>
+                          <a href="/admin/trips/trip/<%= trips.id %>" class="information">
+                            <%= trips.status %>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  <% } %>  
+                </table>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+<%- include('../includes/admin-lower-section.ejs') %>
+
+
+
+

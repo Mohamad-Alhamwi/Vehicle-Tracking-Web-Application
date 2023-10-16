@@ -1,0 +1,40 @@
+{
+  "name": "central-vehicle-control-web-application",
+  "version": "1.0.0",
+  "description": "Web Application of SDC Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "app": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohamad-Alhawmi/Central-Vehicle-Control-Web-Application.git"
+  },
+  "author": "Mohamad Alhamwi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mohamad-Alhawmi/Central-Vehicle-Control-Web-Application/issues"
+  },
+  "homepage": "https://github.com/Mohamad-Alhawmi/Central-Vehicle-Control-Web-Application#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.9.18",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.3",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
